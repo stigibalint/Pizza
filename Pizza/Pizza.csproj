@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Main.xaml.cs">
       <Generator>MSBuild:Compile</Generator>
     </Compile>

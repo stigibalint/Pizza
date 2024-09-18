@@ -18,31 +18,17 @@ namespace Pizza
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            string username = usernameTextBox.Text;
-            string password = passwordBox.Password;
-
-            if (username == "user" && password == "user")
-            {
-                MessageBox.Show("Sikeres bejelentkezés!");
-
-   
-                Main dashboardWindow = new Main();
-                dashboardWindow.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Hibás felhasználónév vagy jelszó!");
-            }
-        }
-
         private void SwitchToRegister_Click(object sender, RoutedEventArgs e)
         {
-            RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.Show();
-            this.Close();
+            loginPanel.Visibility = Visibility.Collapsed;
+            registerPanel.Visibility = Visibility.Visible;
         }
+
+        private void SwitchToLogin_Click(object sender, RoutedEventArgs e)
+        {
+            registerPanel.Visibility = Visibility.Collapsed;
+            loginPanel.Visibility = Visibility.Visible;
+        }
+
     }
 }
